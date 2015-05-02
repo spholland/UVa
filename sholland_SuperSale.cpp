@@ -1,6 +1,4 @@
 // Steven Holland
-// COMP 370
-// Assignment 5
 
 // UVa Problem #10130 SuperSale
 // This is a great example of the 0/1 knapsack problem.

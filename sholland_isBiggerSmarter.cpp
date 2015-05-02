@@ -1,6 +1,4 @@
 // Steven Holland
-// COMP 370
-// Assignment 4
 
 // UVa  Problem #10131
 // Is Bigger Smarter?

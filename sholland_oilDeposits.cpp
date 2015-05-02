@@ -1,6 +1,4 @@
 // Steven Holland
-// COMP 370
-// Assignment 7
 
 //UVa #572 Oil Deposits
 
