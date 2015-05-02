@@ -3,16 +3,8 @@
 // Assignment 5
 
 // UVa Problem #10130 SuperSale
-// This is a great example of the knapsack problem we discussed in class this week. This
-// problem is looking for the maximum value of some items when given a maximum amount of
-// weight a person can hold.
-// To solve this problem I used dynamic programming with a 2D vector called "graph" to 
-// demonstrate the easiest way I know how to solve the knapsack problem.
+// This is a great example of the 0/1 knapsack problem.
 
-// Steps:
-// 1. Initialize the 2D vector and populate the first column
-// 2. Find the maximum knapsack value
-// 3. Print out the max value and move onto the next case
 
 #include <iostream>
 #include <fstream>
@@ -30,16 +22,13 @@ enum Type {
 	COST
 };
 
-// My vectors to store values for the items, people involved, and the graph
-// used in knapsack calculation
 vector<vector<int> > items;
 vector <int> group;
 vector<vector<int> > graph;
 
 int Cap = 0;
 
-// This method will initialize the graph using a temporary vector "row"
-// and pushing it to our 2D vector "graph", initializing all elements to 0.
+
 void initGraph() {
 	for (int i = 0; i < Cap; i++) {
 		vector<int> row;
@@ -50,7 +39,6 @@ void initGraph() {
 	}
 }
 
-// This method will calculate the maximun knapsack value
 void maxKnap() {
 	for (int column = 0; column < items.size(); column++) {
 		for (int row = 0; row < Cap; row++) {
@@ -77,7 +65,6 @@ void maxKnap() {
 }
 
 
-// My main method.
 int main() {
 	freopen("SaleInput.txt", "r", stdin);
 	int t, n, p, w, g, mw;

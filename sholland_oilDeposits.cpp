@@ -4,12 +4,7 @@
 
 //UVa #572 Oil Deposits
 
-// To solve this problem I used a resursive flood-fill algorithm similar to what was used
-// last year to solve the problem Castle. Using this method, a graph to store all the 
-// input, and a list to store locations, I am able to resursively go through my graph
-// checking if an oil deposit is there and checking around it to see if any other oil 
-// deposits are near it. I them use a variable to count the number of recursive steps done
-// if a oil deposit is found, therefore finding the total number of oil deposits.
+// To solve this problem I used a resursive flood-fill algorithm.
 
 #include <iostream>
 #include <fstream>
