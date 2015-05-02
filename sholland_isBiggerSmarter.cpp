@@ -9,20 +9,7 @@
 // will be done using dynamic programming.
 
 // The answer we are trying to get is the longest possible subsequence
-// in the sorted order of elephants. To do this I created a structure
-// to store each of the elephant's weight, IQ, and ID. I then sorted the 
-// elephants by increasing weight in a vector. I used a vector because
-// it seemed like the easiest way to asses the problem due to the ability
-// of a vector to be easily modified. To find the longest increasing 
-// subequence of elephants, I used two loops. This allowed me to loop 
-// through the elephants starting at the end and going backwards while 
-// checking any previous subsequences found to find the longest one. If
-// a longer sequence is found, it will update and continue until the loop
-// has reached the beginning of the vector of elephants. I then outputted
-// the previously found longest increasing subsequence information, including
-// the total amount of the sequence and the elephant IDs associated with it.
-
-
+// in the sorted order of elephants.
 
 #include <iostream>
 #include <fstream>
@@ -53,9 +40,7 @@ bool weightCompare(Elephant A, Elephant B) {
 }
 
 // This function prints out the answer by going through the previously
-// found information about the longest increasing subsequence. I started
-// with an index of -1 because that doesn't relate to an element in the 
-// vector.
+// found information about the longest increasing subsequence.
 void getAnswer(vector<int> &ELEOrder, vector<int> &SLength, vector<Elephant> vector) {
 
 	int temp = 0;
@@ -74,11 +59,7 @@ void getAnswer(vector<int> &ELEOrder, vector<int> &SLength, vector<Elephant> vec
 }
 
 
-// My algorithm for the longest increasing subsequence
-// Here I loop the amount of times as the size of the vector, backwards starting
-// at the end of the vector while checking for appropriate weight and iq
-// distribution. I two vecctors ELEOrder and SLength to keep track of the final
-// elephant order and sequence length. 
+// My algorithm for the longest increasing subsequence 
  void longEnough(vector<int> &ELEOrder, vector<int> &SLength, vector<Elephant> vector) {
 
 	 for (int i = vector.size() - 2; i >= 0; i--) {
@@ -93,11 +74,7 @@ void getAnswer(vector<int> &ELEOrder, vector<int> &SLength, vector<Elephant> vec
 	 }
 }
 
-// In this main function I initialize all my variables, get the
-// elephant information, and then sort the elephants by increasing
-// weight. I then call methods to find the longest increasing
-// subsequence and output the final answer and IDs of all the
-// elephants included.
+
 int main() {
 	freopen("IsBSinput.txt", "r", stdin);
 
